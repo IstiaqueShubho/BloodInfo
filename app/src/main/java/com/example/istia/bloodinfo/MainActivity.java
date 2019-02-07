@@ -1,0 +1,40 @@
+package com.example.istia.bloodinfo;
+
+import android.content.Intent;
+        import android.support.v7.app.AppCompatActivity;
+        import android.os.Bundle;
+        import android.view.View;
+        import android.widget.Button;
+        import android.widget.TextView;
+
+public class MainActivity extends AppCompatActivity {
+    TextView tv1;
+    Button button;
+    Button button2;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        button =(Button) findViewById(R.id.button);
+        button2=(Button) findViewById(R.id.button2);
+        tv1=(TextView) findViewById(R.id.txt);
+
+        button.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view) {
+                Intent signinsignup=new Intent(MainActivity.this,signinsignup.class);
+                startActivity(signinsignup);
+            }
+        });
+        button2.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view) {
+                Intent finddonar=new Intent(MainActivity.this,Finddonar.class);
+                startActivity(finddonar);
+            }
+        });
+
+    }
+}
